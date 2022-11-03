@@ -31,13 +31,15 @@ export default class AjaxApis extends Component{
                         id: poke.id,
                         avatar: poke.sprites.front_default
                     }
-                    this.pokemones.push(pokemon);
+                    //this.pokemones.push(pokemon);
+                    const pokemones = [...this.state.pokemones, pokemon];
+                    this.setState({pokemones});
                 });
             });
         });
-        this.setState({pokemones: this.state.pokemones.push(...this.pokemones)});
-        console.log(this.pokemones);
-        console.log(this.state.pokemones);
+        //this.setState({pokemones: this.state.pokemones.push(...this.pokemones)});
+        //console.log(this.pokemones);
+        // console.log(this.state.pokemones);
         
     }
 
@@ -46,7 +48,7 @@ export default class AjaxApis extends Component{
             <>
                 <h2>Peticiones asincronas en componentes de clase</h2>
                 {this.state.pokemones.length > 0
-                ? this.state.pokemones.map(el => <Pokemon key={el.id} name={el.name} avatar={el.avatar} />)
+                ? this.state.pokemones.map(el => <Pokemon  key={el.id} name={el.name} avatar={el.avatar} />)
                 : <h2>Cargando</h2>} 
             </>
         )
