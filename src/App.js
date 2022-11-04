@@ -5,6 +5,8 @@ import ContadorHooks from './Componentes/HOOOOOOKS/ContadorHooks';
 import ScrollHooks from './Componentes/HOOOOOOKS/ScrollHook';
 import RelojHooks from './Componentes/HOOOOOOKS/RelojHooks';
 import Pokemones from './Componentes/HOOOOOOKS/Pokemones'
+import HooksPersonalizados from './Componentes/HOOOOOOKS/HooksPersonalizados';
+import Referencias from './Componentes/Referencias';
 
 function App() {
   return (
@@ -31,6 +33,9 @@ function App() {
       <RelojHooks/>
       <hr></hr>
       <Pokemones/>
+      <hr></hr>
+      <HooksPersonalizados />
+      <Referencias/>
     </div>
   );
 }
